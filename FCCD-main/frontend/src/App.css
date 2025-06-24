@@ -1,0 +1,204 @@
+/* Custom styles for the Student Dashboard */
+
+.App {
+  text-align: left;
+}
+
+/* Scrollbar styling for calendar */
+.max-h-96::-webkit-scrollbar {
+  width: 6px;
+}
+
+.max-h-96::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+.max-h-96::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.max-h-96::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.2s ease-in-out;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Custom gradient backgrounds */
+.gradient-blue {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-green {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+}
+
+/* Mobile responsive improvements */
+@media (max-width: 768px) {
+  .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .grid-cols-7 {
+    gap: 1px;
+  }
+  
+  .grid-cols-7 > div {
+    min-height: 60px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Print styles for bill */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+  
+  body {
+    background: white !important;
+  }
+}
+
+/* Focus states for accessibility */
+button:focus,
+a:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Loading states */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #e5e7eb;
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Custom table styles for better readability */
+.table-striped tbody tr:nth-child(odd) {
+  background-color: #f9fafb;
+}
+
+.table-striped tbody tr:hover {
+  background-color: #f3f4f6;
+}
+
+/* Status indicators */
+.status-active {
+  background-color: #10b981;
+  color: white;
+}
+
+.status-pending {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.status-inactive {
+  background-color: #ef4444;
+  color: white;
+}
+
+/* Course card enhancements */
+.course-card {
+  border-left: 4px solid #3b82f6;
+  transition: border-color 0.3s ease;
+}
+
+.course-card:hover {
+  border-left-color: #1d4ed8;
+}
+
+.course-card.dhy {
+  border-left-color: #8b5cf6;
+}
+
+.course-card.rad {
+  border-left-color: #10b981;
+}
+
+/* Calendar improvements */
+.calendar-day {
+  transition: all 0.2s ease;
+}
+
+.calendar-day:hover {
+  background-color: #eff6ff;
+  transform: scale(1.02);
+}
+
+.calendar-day.has-classes {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+}
+
+/* Bill styling enhancements */
+.bill-row {
+  transition: background-color 0.2s ease;
+}
+
+.bill-row:hover {
+  background-color: #f8fafc;
+}
+
+/* Responsive text sizing */
+@media (max-width: 640px) {
+  .text-responsive {
+    font-size: 0.875rem;
+  }
+  
+  .text-lg-responsive {
+    font-size: 1rem;
+  }
+  
+  .text-xl-responsive {
+    font-size: 1.125rem;
+  }
+}
